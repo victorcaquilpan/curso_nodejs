@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <title>Prueba de desarrollo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <!-- CSS Requerido por Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+    <!-- CSS para dar tamaño al mapa -->
+    <style>
+      #myMap{
+        height: 600px;
+        width: 500px;
+        }
+    </style>
+
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-md">
+
+  <!-- Se coloca el logotipo y una url de destino -->
+  <a href="https://portal.sma.gob.cl/">
+        <img src="Imagenes/Logo horizontal fondo transparente.png" alt="HTML tutorial" style="widows: 168px;height:84px;border:0;">
+      </a>                 
+                  <!-- Se establece un titulo-->
+                <h2 align="center">Proyecto de Monitoreo de Calidad del Aire</h2>
+
+                <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main-navigation">
+                  <!--Se crean las pestañas  -->  
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="active nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Acerca del proyecto</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Información Complementaria</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Información de Contacto</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+            <!-- Establece una imagen como fondo. En el css se setea imagen a utilizar  
+              <header class="page-header header container-fluid">
+                  <div class="overlay"></div>
+                </header> -->
+
+               <!-- Cargar mapa -->
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-3">
+                            <h2 class="text-center">Mapa</h2>
+                        </div>
+                      </div>
+                      <div class="intro">
+                      </div>
+                      <div class="intro">
+                        <div id="myMap"></div>
+                      </div>
+                    </div>
+                  
+              
+                
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+crossorigin=""></script>
+<!-- Script de funcionalidades generales -->
+<script src="main.js"></script>
+<!-- Script de configuración de mapa -->
+<script src="mapa.js"></script>
+</body>
+</html>

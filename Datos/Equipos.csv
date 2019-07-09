@@ -1,0 +1,25 @@
+﻿ID;Nombre lugar;Tipo de Emplazamiento;Dirección;Latitud;Longitud;Fecha instalación;Equipo instalado;Estado;Sitio;Mantencion;Sensor T y HR;Sensor MP
+1;Estación Parque O'Higgins;MMA;General Rondizzoni 511, Santiago;-33.470193;-70.659596;04-08-2017;Fona1;Instalada;MMA;18-10-2017;DHT;PPD42
+2;Estación Pudahuel;MMA;El Lazo 8624, Pudahuel;-33.437981;-70.749774;08-08-2017;Fona18;Funcionando (V3);MMA;26-06-2018 // 03-10-2017;SHT;PMS3003
+3;Estación El Bosque (DEM Departamento de Educación El Bosque);MMA;Riquelme 155, El Bosque;-33.546896;-70.666074;16-08-2017;Fona 14;Caido (V3);MMA;;SHT;PMS3003
+4;Estación La Florida;MMA;Real Pontevedra 6544, La Florida;-33.516629;-70.587740;16-08-2017;Fona29;Caido (V3);MMA;;DHT;PM2005
+5;Las Condes;MMA;Av. Las Condes 12066, Las Condes;-33.376720;-70.523228;18-08-2017;Fona28;Funcionando (V3);MMA;;SHT;PM2005
+6;Independencia;MMA;La Paz, 748, Independencia;-33.422236;-70.651164;21-08-2017;Fona15;Funcionando (V3);MMA;19-10-2017;SHT;PMS3003
+7;Estación Puente Alto (Centro de salud Lautira Vicuña);MMA;Los Mañios 1149, Puente Alto;-33.591428;-70.594408;30-08-2017;Fona5;Funcionando (V3);MMA;;DHT;PM2005
+8;Instituto Nacional;Estatal;Arturo Prat 33, Santiago;-33.445201;-70.650329;01-09-2017;Fona25;Caido (V3);M. Santiago;22-11-2017;DHT;PMS3003
+9;Escuela Republica de Mexico;Estatal;Raulí 575, Santiago;-33.449328;-70.636843;01-09-2017;Fona24;Caido (V3);M. Santiago;22-11-2017;DHT;PMS3003
+10;Casa Colorada;Estatal;Merced 860, Santiago;-33.438456;-70.649302;01-09-2017;Fona17;Funcionando (V3);M. Santiago;;SHT;PMS3003
+11;Cerrillos;MMA;Pedro Aguirre Cerda 6100;-33.493407;-70.702407;05-09-2017;Fona6;Revisar;MMA;;DHT;PPD42
+12;Talagante;MMA;Libertador Bernardo O'Higgins 3201, Talagante;-33.673746;-70.953082;05-09-2017;Fona0;Revisar;MMA;;SHT;PPD42
+13;IDMA;Estatal;Compañía de Jesus 1447, Santiago;-33.438987;-70.657707;11-09-2017;Fona3;Funcionando (V3);M. Santiago;16-11-2017;SHT;PM2005
+14;Escuela Reyes Católicos;Estatal;Santa Elena 1829, Santiago;-33.467706;-70.627991;11-09-2017;Fona27;Funcionando (V3);M. Santiago;22-11-2017;DHT;PMS3003
+15;Campus Central PUC;Privado;Libertador Bernardo O'Higgins 340, Santiago;-33.441498;-70.641883;14-09-2017;Fona10;Revisar;PUC;;DHT;PMS3003
+16;Campus Oriente PUC;Privado;Jaime Guzmán Errázuriz 3290, Providencia;-33.445545;-70.594180;14-09-2017;Fona2;Revisar;PUC;;DHT;PM2005
+17;Universidad Autónoma (Centro de Salud y Deportes El Llano);Privado;Llano Subercaseaux 2801;-33.480320;-70.649627;04-10-2017;Fona13;Caido (V3);UA;;DHT;PMS3003
+18;DIGA - La Pintana;Estatal;Santa Rosa 13.345 esquina Lo Blanco;-33.587784;-70.629403;12-10-2017;Fona16;Caido (V3);DIGA;;DHT;PMS3003
+19;Universidad Autónoma (Sede Providencia);Privado;Av. Pedro de Valdivia 425, Providencia;-33.427379;-70.611227;13-11-2017;Fona26;Caido (V3);UA;23-11-2017;DHT;PPD42
+20;Campus Lo Contador (PUC);Privado;El Comendador 1916, Providencia;-33.419192;-70.617766;23-11-2017;Fona23;Instalada;PUC;;DHT;PM2005
+21;Municipalidad de Paine;Estatal;Av. General Baquedano 490, Paine;-33.807287;-70.741649;12-03-2018;Fona12;Funcionando (V3);;;DHT;PMS3003
+22;Estacion Quilicura;MMA;Sabadell 633, Quilicura;-33.349665;-70.723730;17-05-2018;Fona20;Caido (V3);MMA;;DHT;PM2005
+23;Estación Cerro Navia;MMA;"
+Av. Las Torres 1204, Cerro Navia";-33.433116;-70.732066;26-06-2018;Fona11;Funcionando (V3);MMA;26-06-2018;SHT;PM2005

@@ -1,0 +1,28 @@
+{
+  "name": "clase4",
+  "version": "1.0.0",
+  "description": "Ejemplos Scraping y lectura XLSX",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/codigonet/fau-nodejs"
+  },
+  "scripts": {
+    "test": "echo \"Solo de prueba\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "csv-parser": "^2.3.0",
+    "csv-writer": "^1.4.0",
+    "http-serve": "^1.0.1",
+    "read-excel-file": "^4.0.1"
+  },
+  "dependencies": {
+    "csv-string": "^3.1.6",
+    "csv2geojson": "^5.1.1",
+    "d3": "^5.9.7",
+    "d3-fetch": "^1.1.2",
+    "mocha": "^6.1.4"
+  }
+}
