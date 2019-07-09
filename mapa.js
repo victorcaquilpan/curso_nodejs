@@ -1,5 +1,5 @@
 // Definir atributos iniciales para el Mapa
-const MAP_ZOOM = 10
+const MAP_ZOOM = 9
 const MAP_CENTER = [-33.4444, -70.6535]
 
 // Crear instancia del Mapa
@@ -10,3 +10,4 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map)
 
+//omnivore.csv('Equipos.csv').addTo(map);

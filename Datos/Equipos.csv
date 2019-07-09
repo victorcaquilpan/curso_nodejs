@@ -1,4 +1,4 @@
-﻿ID;Nombre lugar;Tipo de Emplazamiento;Dirección;Latitud;Longitud;Fecha instalación;Equipo instalado;Estado;Sitio;Mantencion;Sensor T y HR;Sensor MP
+﻿id;nombre lugar;tipo de emplazamiento;direccion;latitude;longitude;fecha instalacion;equipo instalado;estado;sitio;mantencion;sensor t y hr;sensor mp
 1;Estación Parque O'Higgins;MMA;General Rondizzoni 511, Santiago;-33.470193;-70.659596;04-08-2017;Fona1;Instalada;MMA;18-10-2017;DHT;PPD42
 2;Estación Pudahuel;MMA;El Lazo 8624, Pudahuel;-33.437981;-70.749774;08-08-2017;Fona18;Funcionando (V3);MMA;26-06-2018 // 03-10-2017;SHT;PMS3003
 3;Estación El Bosque (DEM Departamento de Educación El Bosque);MMA;Riquelme 155, El Bosque;-33.546896;-70.666074;16-08-2017;Fona 14;Caido (V3);MMA;;SHT;PMS3003
