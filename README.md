@@ -1,4 +1,6 @@
-# Entrega de Proyecto - Curso Programación y Visualización de datos geográficos
+# Entrega de Proyecto - Curso Programación y Visualización de Datos Geográficos
+
+## Victor Caquilpan
 
 Entrega de proyecto Curso Programación y Visualización de Datos - FAU
 
