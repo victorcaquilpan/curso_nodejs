@@ -35,3 +35,18 @@ body {
     top: 0;
     background: rgba(0, 0, 0, 0.1);
   }
+.description {
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+}
+.description h1 {
+  color: #6ab446;
+}
+.description p {
+  color: rgb(22, 57, 173);
+  font-size: 1.3rem;
+  line-height: 1.5;
+}

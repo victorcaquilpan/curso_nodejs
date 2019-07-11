@@ -1,105 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  
-    <title>Prueba de desarrollo</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
-    <link rel="stylesheet" type="text/css" href="main.css">
 
-    <!-- CSS Requerido por Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
-    <!-- Prueba para utilizar iconos especiales -->
-   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-   <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+<head>
 
-   <!-- Se corre script para generar variable global -->
-   <script type="text/javascript" src="Datos/Equipos.js"></script>
-   
+  <title>Prueba de desarrollo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="main.css">
 
-    <!-- CSS para dar tamaño al mapa -->
-    <style>
-      #myMap{
-        height: 600px;
-        width: 500px;
-        }
-    </style>
+  <!-- CSS Requerido por Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <!-- Prueba para utilizar iconos especiales -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+  <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+
+  <!-- Se corre script para generar variable global -->
+  <script type="text/javascript" src="Datos/Equipos.js"></script>
+
+
+  <!-- CSS para dar tamaño al mapa -->
+  <style>
+    #myMap {
+      height: 600px;
+      width: 500px;
+    }
+  </style>
 
 </head>
+
 <body>
 
-        <nav class="navbar navbar-expand-md">
-
+  <div class="collapse navbar-collapse" id="main-navigation"></div>
   <!-- Se coloca el logotipo y una url de destino -->
   <a href="https://portal.sma.gob.cl/">
-        <img src="Imagenes/Logo horizontal fondo transparente.png" alt="HTML tutorial" style="widows: 168px;height:84px;border:0;">
-      </a>                 
-                  <!-- Se establece un titulo-->
-                <h2 align="center">Proyecto de Monitoreo de Calidad del Aire</h2>
+    <img src="Imagenes/Logo horizontal fondo transparente.png" alt="HTML tutorial" style="widows: 168px;height:84px;border:0;">
+  </a>
 
-                <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="main-navigation">
-                  <!--Se crean las pestañas  -->  
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="active nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Acerca del proyecto</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Información Complementaria</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Información de Contacto</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+  <!-- Se establece un titulo-->
+  <h2 align="center">Proyecto de Monitoreo de Calidad del Aire</h2>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
-              <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
-              </div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Acerca del proyecto</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contacto</a>
+    </li>
+  </ul>
 
-            <!-- Establece una imagen como fondo. En el css se setea imagen a utilizar  
-              <header class="page-header header container-fluid">
-                  <div class="overlay"></div>
-                </header> -->
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-               <!-- Cargar mapa -->
-                    <div class="container-fluid">
-                      <div class="row">
-                        <div class="col-3">
-                            <h2 class="text-center">Mapa</h2>
-                        </div>
-                      </div>
-                      <div class="intro">
-                      </div>
-                      <div class="intro">
-                        <div id="myMap"></div>
-                      </div>
-                    </div>
-                        
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-crossorigin=""></script>
-<!-- Script de iconos leaflet -->
-<script src="js/leaflet.awesome-markers.js"></script>
-<!-- Script de funcionalidades generales -->
-<script src="main.js"></script>
-<!-- Script de configuración de mapa -->
-<script src="mapa.js"></script>
+      <!-- Cargar mapa -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-3">
+            <h2 class="text-center">Mapa</h2>
+            <div class="intro">
+            </div>
+            <div class="intro">
+              <div id="myMap"></div>
+            </div>
+          </div>
+          <div class="col-1">
+            </div>
+          <div class="col-3">
+            <h2 class="text-center">Equipos <br><br>
+                <img src="Imagenes/PM2005.jpg" class="img-thumbnail"> PM2005
+                <img src="Imagenes/PMS3003.jpg" class="img-thumbnail">PMS3003
+                <img src="Imagenes/PPD42NS.jpg" class="img-thumbnail">PPD42NS  
+            </h2>
+          </div>
+          <div class="col-5">
+              <h2 class="text-center">Gráfico<br><br>
+          </div>
+
+          
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+      <div class="description">
+        <h1>Bienvenido al Proyecto de Monitoreo de Calidad del Aire!</h1>
+        <p>La presente inciativa corresponde a un proyecto liderado por la Ssuperintendencia del Medio Ambiente (SMA), cuyo
+          objetivo es desplegar una red de monitoreo de calidad del aire utilizando equipos de bajo costo. Para esto, dichos
+          equipos son conformados por sensores de material particulado, temperatura y humedad relativa, las cuales corresponden
+          a variables que nos pueden indicar el estado de la contaminación ambiental en un lugar determinado. Sumado a lo
+          anterior, tambiéns se cuenta con un módulo de comunicación GPRS para enviar datos en tiempo real a una plataforma
+          propia de la institución.</p>
+      </div>
+
+
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Ante cualquier consulta, no dude en contactarse con nosotros al correo:
+      <b> victor.caquilpan@sma.gob.cl </b>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+  <!-- Script de iconos leaflet -->
+  <script src="js/leaflet.awesome-markers.js"></script>
+  <!-- Script de funcionalidades generales -->
+  <script src="main.js"></script>
+  <!-- Script de configuración de mapa -->
+  <script src="mapa.js"></script>
 
 </body>
+
 </html>
