@@ -5,7 +5,7 @@ var eje_xx = equipos.map(function (item) {
     return item.properties.Name;
 
 });
-//console.log(eje_xx)
+console.log(eje_xx)
 
 var eje_yy = equipos.map(function (item) {
     return item.properties.concentracion;
@@ -77,7 +77,7 @@ d3.csv('Datos/FONARM.csv')
                 position: 'top',
                 labels: {
                     boxWidth: 80,
-                    fontColor: 'black'
+                    fontColor: 'blue'
                 }
             }
         };

@@ -33,7 +33,7 @@ body {
   left: 50%;
   position: absolute;
   top: 45%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -35%);
   text-align: center;
 }
 .description h1 {
