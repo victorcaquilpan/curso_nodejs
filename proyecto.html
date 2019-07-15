@@ -15,7 +15,7 @@
     crossorigin="" />
   <!-- Prueba para utilizar iconos especiales -->
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-  <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+
 
   <!-- Se corre script para generar variable global -->
   <script type="text/javascript" src="Datos/Equipos.js"></script>
@@ -95,30 +95,27 @@
 
               <div class="form-group">
                 <label for="exampleFormControlSelect1">Selección de estación</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Estación Parque O'Higgins</option>
-                  <option>Estación Pudahuel</option>
-                  <option>Estación El Bosque (DEM Departamento de Educación El Bosque)</option>
-                  <option>Estación La Florida</option>
-                  <option>Las Condes</option>
-                  <option>Independencia</option>
-                  <option>Estación Puente Alto (Centro de salud Lautira Vicuña)</option>
+                <select class="form-control" id="selector">
+                  <option selected>Selecciona una estación...</option>
+                  <option>Parque Ohiggins (MMA)</option>
+                  <option>Pudahuel (MMA)</option>
+                  <option>El Bosque (MMA)</option>
+                  <option>La Florida (MMA)</option>
+                  <option>Las Condes (MMA)</option>
+                  <option>Independencia (MMA)</option>
+                  <option>Puente Alto (MMA)</option>
                   <option>Instituto Nacional</option>
-                  <option>Escuela Republica de Mexico</option>
+                  <option>Escuela Mexico</option>
                   <option>Casa Colorada</option>
-                  <option>Cerrillos</option>
-                  <option>Talagante</option>
                   <option>IDMA</option>
-                  <option>Escuela Reyes Católicos</option>
-                  <option>Campus Central PUC</option>
-                  <option>Campus Oriente PUC</option>
-                  <option>Universidad Autónoma (Centro de Salud y Deportes El Llano)</option>
-                  <option>DIGA - La Pintana</option>
-                  <option>Universidad Autónoma (Sede Providencia)</option>
-                  <option>Campus Lo Contador (PUC)</option>
+                  <option>Escuela Reyes Catolicos</option>
+                  <option>PUC (Lo Contador)</option>
+                  <option>U. Autonoma (El Llano)</option>
+                  <option>DIGA (La Pintana)</option>
+                  <option>U. Autonoma (Providencia)</option>
                   <option>Municipalidad de Paine</option>
-                  <option>Estacion Quilicura</option>
-                  <option>Estación Cerro Navia</option>
+                  <option>Quilicura (MMA)</option>
+                  <option>Cerro Navia (MMA)</option>
                 </select>
               </div>
 
@@ -126,6 +123,10 @@
               <div class="intro">
                 <canvas id="myChart2" width="400" height="200"></canvas>
               </div>
+
+               <!--  <button type="button" class="btn btn-primary" onclick="download_csv()">Descarga CSV</button> --> 
+               <a href='#' onclick='downloadCSV({ filename: "datos.csv" });'>Descarga CSV</a>
+
 
 
 
@@ -169,14 +170,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script>
-  <!-- Script de iconos leaflet -->
-  <script src="js/leaflet.awesome-markers.js"></script>
   <!-- Script de funcionalidades generales -->
   <script src="main.js"></script>
   <!-- Script de configuración de mapa -->
   <script src="mapa.js"></script>
   <!-- Script de grafico -->
   <script src="grafico.js"></script>
+  <!-- Script de descarga de datos CSV -->
+  <script src="descarga.js"></script>
 </body>
 
 </html>

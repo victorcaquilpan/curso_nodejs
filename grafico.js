@@ -5,7 +5,7 @@ var eje_xx = equipos.map(function (item) {
     return item.properties.Name;
 
 });
-console.log(eje_xx)
+//console.log(eje_xx)
 
 var eje_yy = equipos.map(function (item) {
     return item.properties.concentracion;
@@ -43,63 +43,102 @@ var myChart = new Chart(ctx, {
     options: options
 });
 
-// Generación de gráfico secundario. Lectura de documento csv FONARM.csv
+// Generación de gráfico secundario. Lectura de documento csv FONARM.csv 
 
-
-var ctx_line = document.getElementById("myChart2").getContext('2d');
-
-d3.csv('Datos/FONARM.csv')
-    .then((datos) => {
-
-        let datos_filtro = datos.filter(function (d) { return d.estacion == "IDMA" })
-
-        //console.log(datos_filtro)
-
-        let hora = datos_filtro.map(function (elemento, indice) {
-
-            return elemento.Hora_GMT4
-        })
+/*Primero se realiza un filtro de los datos del csv FONARM, seleccionando una estación en particular  */
 
 
 
 
 
-        let pm25 = datos_filtro.map(function (elemento2, indice) {
 
-            return elemento2.pm25
-        })
+$(document).ready(function () {
 
-        // console.log(pm25)
-
-        var chartOptions = {
-            legend: {
-                display: true,
-                position: 'top',
-                labels: {
-                    boxWidth: 80,
-                    fontColor: 'blue'
-                }
-            }
-        };
-        var monitoreo = {
-            labels: hora,
-            datasets: [{
-                label: "Nivel de contaminación - Estación IDMA",
-                data: pm25,
-
-            }]
-
-        };
-
-        //console.log(monitoreo)
-
-        // End Defining data
-        var myChart2 = new Chart(ctx_line, {
-            type: 'line',
-            data: monitoreo,
-            options: chartOptions
-        })
+    $('#selector').change(function () {
+        var seleccionHecha = $(this).val();
+        //alert(seleccionHecha);
+      //  console.log(seleccionHecha);
 
 
+        var ctx_line = document.getElementById("myChart2").getContext('2d');
+
+        d3.csv('Datos/FONARM.csv')
+            .then((datos) => {
+
+                // let datos_filtro = datos.filter(function (d) { return d.estacion == "IDMA" })
+                let datos_filtro = datos.filter(function (d) { return d.estacion == seleccionHecha })
+
+
+                console.log(datos_filtro)
+
+                //////////////////////////////
+                // Script para generar descarga de datos
+
+              
+                
+                ///////////////////////////////
+
+
+                let hora = datos_filtro.map(function (elemento, indice) {
+
+                    return elemento.Hora_GMT4
+                })
+
+
+
+
+
+                let pm25 = datos_filtro.map(function (elemento2, indice) {
+
+                    return elemento2.pm25
+                })
+
+                // console.log(pm25)
+
+                var chartOptions = {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            boxWidth: 80,
+                            fontColor: 'blue'
+                        }
+                    },
+                    events: ['mouseout'],
+                    scales: {
+                        xAxes: [{
+                        type: 'time',
+                        time: {
+                        parser: 'YYYY-MM-DD',
+                        unit: 'month',
+                        displayFormats: {
+                        day: 'ddd'
+                        },
+                        }
+                        }]
+                        },
+                     // Quita interacciones en el grafico
+                };
+                var monitoreo = {
+                    labels: hora,
+                    datasets: [{
+                        label: "Concentración de MP 2.5 [ug m-3]",
+                        data: pm25,
+
+                    }]
+
+                };
+
+                //console.log(monitoreo)
+
+                // End Defining data
+                var myChart2 = new Chart(ctx_line, {
+                    type: 'line',
+                    data: monitoreo,
+                    options: chartOptions
+                })
+            });
 
     });
+}
+);
