@@ -57,7 +57,7 @@ $(document).ready(function () {
     $('#selector').change(function () {
         var seleccionHecha = $(this).val();
         //alert(seleccionHecha);
-      //  console.log(seleccionHecha);
+        //  console.log(seleccionHecha);
 
 
         var ctx_line = document.getElementById("myChart2").getContext('2d');
@@ -73,9 +73,48 @@ $(document).ready(function () {
 
                 //////////////////////////////
                 // Script para generar descarga de datos
-
-              
+                var csv
+                var key = 0
+                keysCounter = 0
+                var row = 0
                 
+                // Loop the array of objects
+                for (var row = 0; row < datos_filtro.length; row++) {
+                    var keysAmount = Object.keys(datos_filtro[row]).length
+                    var keysCounter = 0
+
+                    // If this is the first row, generate the headings
+                    if (row === 0) {
+
+                        // Loop each property of the object
+                        for (var key in datos_filtro[row]) {
+
+                            // This is to not add a comma at the last cell
+                            // The '\r\n' adds a new line
+                            csv += key + (keysCounter + 1 < keysAmount ? ',' : '\r\n')
+                            keysCounter++
+                        }
+                    } else {
+                        for (var key in datos_filtro[row]) {
+                            csv += datos_filtro[row][key] + (keysCounter + 1 < keysAmount ? ',' : '\r\n')
+                            keysCounter++
+                        }
+                    }
+
+                    keysCounter = 0
+                }
+                
+                // Once we are done looping, download the .csv by creating a link
+                let link = document.createElement('a')
+                link.id = 'download-csv'
+                link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(csv));
+                link.setAttribute('download', 'datos.csv');
+                document.body.appendChild(link)
+                document.querySelector('#download-csv').click()
+
+                var csv = [{}];
+                
+
                 ///////////////////////////////
 
 
@@ -107,17 +146,17 @@ $(document).ready(function () {
                     events: ['mouseout'],
                     scales: {
                         xAxes: [{
-                        type: 'time',
-                        time: {
-                        parser: 'YYYY-MM-DD',
-                        unit: 'month',
-                        displayFormats: {
-                        day: 'ddd'
-                        },
-                        }
+                            type: 'time',
+                            time: {
+                                parser: 'YYYY-MM-DD',
+                                unit: 'month',
+                                displayFormats: {
+                                    day: 'ddd'
+                                },
+                            }
                         }]
-                        },
-                     // Quita interacciones en el grafico
+                    },
+                    // Quita interacciones en el grafico
                 };
                 var monitoreo = {
                     labels: hora,

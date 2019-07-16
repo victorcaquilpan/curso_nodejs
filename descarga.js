@@ -1,5 +1,6 @@
 
-  function convertArrayOfObjectsToCSV(args) {
+/*
+function convertArrayOfObjectsToCSV(args) {
     var result, ctr, keys, columnDelimiter, lineDelimiter, data;
 
     data = args.data || null;
@@ -7,7 +8,7 @@
         return null;
     }
 
-    columnDelimiter = args.columnDelimiter || ',';
+    columnDelimiter = args.columnDelimiter || ';';
     lineDelimiter = args.lineDelimiter || '\n';
 
     keys = Object.keys(data[0]);
@@ -30,17 +31,19 @@
     return result;
 }
 
+$('#selector').change(function () {
+    var seleccionHecha = $(this).val();
+
+
 function downloadCSV(args) {
     var data, filename, link;
 
     var csv = convertArrayOfObjectsToCSV({
         data: datos_filtro
-        
     });
-    console.log(data)
     if (csv == null) return;
 
-    filename = args.filename || 'datos.csv';
+    filename = args.filename || 'export.csv';
 
     if (!csv.match(/^data:text\/csv/i)) {
         csv = 'data:text/csv;charset=utf-8,' + csv;
@@ -53,5 +56,10 @@ function downloadCSV(args) {
     link.click();
 }
 
+})
+
+*/
 // Fuente
 //https://code-maven.com/create-and-download-csv-with-javascript
+
+
