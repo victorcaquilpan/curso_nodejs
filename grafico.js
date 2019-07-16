@@ -12,8 +12,6 @@ var eje_yy = equipos.map(function (item) {
 
 });
 
-
-
 var options = {
     responsive: true, // Instruct chart js to respond nicely.
     maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
@@ -48,10 +46,6 @@ var myChart = new Chart(ctx, {
 /*Primero se realiza un filtro de los datos del csv FONARM, seleccionando una estación en particular  */
 
 
-
-
-
-
 $(document).ready(function () {
 
     $('#selector').change(function () {
@@ -72,12 +66,12 @@ $(document).ready(function () {
                 console.log(datos_filtro)
 
                 //////////////////////////////
-                // Script para generar descarga de datos
+                // Script para generar descarga de datos. Al momento de seleccionar una estación, se realiza una descarga de datos
                 var csv
                 var key = 0
                 keysCounter = 0
                 var row = 0
-                
+
                 // Loop the array of objects
                 for (var row = 0; row < datos_filtro.length; row++) {
                     var keysAmount = Object.keys(datos_filtro[row]).length
@@ -103,29 +97,24 @@ $(document).ready(function () {
 
                     keysCounter = 0
                 }
-                
+
                 // Once we are done looping, download the .csv by creating a link
                 let link = document.createElement('a')
                 link.id = 'download-csv'
                 link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(csv));
                 link.setAttribute('download', 'datos.csv');
-                document.body.appendChild(link)
-                document.querySelector('#download-csv').click()
-
+                link.click();
                 var csv = [{}];
-                
 
                 ///////////////////////////////
 
+
+                // Generación de variables para gráfica de lineas
 
                 let hora = datos_filtro.map(function (elemento, indice) {
 
                     return elemento.Hora_GMT4
                 })
-
-
-
-
 
                 let pm25 = datos_filtro.map(function (elemento2, indice) {
 
